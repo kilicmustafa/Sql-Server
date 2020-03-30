@@ -1,0 +1,89 @@
+--adýnda li kelimesi bulanan soyadý n ile biten kiþileri listeleyen kod
+
+
+
+--SELECT * FROM PERSONEL
+--WHERE ADI LIKE '%li%' AND SOYADI LIKE '%n'
+
+
+
+--ADINDA S VEYA s bulunan kayýtlarý listeleyn kod
+
+
+
+--SELECT * FROM PERSONEL
+--WHERE ADI LIKE '%S%' OR ADI LIKE '%s%'
+
+
+
+
+--adresi istanbul olan kayýtlarý liesteleyen kod 
+
+
+
+--SELECT * FROM PERSONEL
+--WHERE ADRES LIKE '%Ýstanbul'
+
+
+
+
+--soyadý yü ile baþlayan ve en az 6 karakterden oluþan kayýtlarý listeleyen kod
+
+
+--SELECT * FROM PERSONEL
+--WHERE SOYADI LIKE 'yü____%'
+
+
+
+
+--BIRIM KODU BOÞ OLMAYAN KAYITLAR ILE ADRESÝ ÝZMÝR OLAN KAYITALRI LISTELEYEN SQL KODU
+
+
+--SELECT * FROM PERSONEL
+--WHERE BIRIM_KODU IS NOT NULL and  ADRES LIKE '%izmir%'
+
+
+
+
+--sýcýl no 10 ile baþlayan ve býrým kodu 201 olanlar veya adý ali, ayþe ve saliha olan kayýtlarý lýsteleyen kod
+
+
+--SELECT * FROM PERSONEL
+--WHERE (SICIL_NO LIKE '10%' AND BIRIM_KODU=201) OR ADI IN('ali','ayþe','saliha')
+
+
+
+
+
+
+--tüm personele ait sicil_no ad, soyad ve adres bilgilerinin ad ve soyad alanýna göre büyükten küçüðe sýralayýnýz
+
+
+--SELECT SICIL_NO, ADI, SOYADI, ADRES FROM PERSONEL
+--ORDER BY ADI DESC,SOYADI DESC
+
+
+
+
+
+--ADI FATMA OLAN VE SOYADININ ÝÇÝNDE E OLAN PERSOENLLERÝN TÜM KAYITLARINI SOYADINA GÖRE BÜYÜKTEN KÜÇÜÐE LÝSTELEYENE KOD
+
+
+--SELECT * FROM PERSONEL
+--WHERE ADI='FATMA' AND SOYADI LIKE '%E%'
+--ORDER BY SOYADI DESC 
+
+
+
+
+
+
+--PERSONELLERI DOGUM TARIHINE GORE BUYUKTEN KUCUCGE,AD VE SOYADA GORE DE KUCUKTEN BUYUGE SIRALAYINIZ
+
+
+--SELECT * FROM PERSONEL
+--ORDER BY DOGUM_TARIHI DESC,ADI ASC, SOYADI ASC
+
+
+ 
+
